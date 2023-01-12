@@ -3,7 +3,7 @@ package com.shristi.quiz_project.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.shristi.quiz_project.R
-import com.shristi.quiz_project.data.QuizFakeData
+import com.shristi.quiz_project.data.QuizData
 import com.shristi.quiz_project.database.QuizDB
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initQuizData() {
-        val initialQuestions = QuizFakeData.getQuizQuestions()
+        val initialQuestions = QuizData.getQuizQuestions()
         val quizDAO = QuizDB(this).getQuizDAO()
 
         MainScope().launch(Dispatchers.IO) {

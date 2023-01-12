@@ -8,7 +8,7 @@ import android.view.View
 import android.view.View.OnClickListener
 import androidx.lifecycle.ViewModelProvider
 import com.shristi.quiz_project.R
-import com.shristi.quiz_project.data.QuizFakeData
+import com.shristi.quiz_project.data.QuizData
 import com.shristi.quiz_project.databinding.FragmentHomeBinding
 import com.shristi.quiz_project.ui.QuizViewModel
 import com.shristi.quiz_project.ui.SplashScreen
@@ -71,7 +71,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), OnClickListener{
     }
 
     private fun resetDB() {
-        viewModel.resetDatabase(QuizFakeData.getQuizQuestions())
+        viewModel.resetDatabase(QuizData.getQuizQuestions())
     }
 
 }
