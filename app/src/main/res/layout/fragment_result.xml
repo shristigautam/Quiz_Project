@@ -1,78 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <TableLayout
+        android:id="@+id/table"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:orientation="vertical"
-        tools:context=".ui.result.ResultFragment">
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:stretchColumns="*">
+        <TableRow>
 
-        <TextView
-            android:id="@+id/totalQuestionsTv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            tools:text="@string/total_questions" />
+            <TextView
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/result"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </TableRow>
 
-        <TextView
-            android:id="@+id/correctAnswerTv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            tools:text="@string/correct_answers" />
+        <TableRow>
 
-        <TextView
-            android:id="@+id/wrongAnswerTv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            tools:text="@string/wrong_answer" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="@string/total_questions"
+                android:background="@drawable/table_cell_bg"/>
 
-        <TextView
-            android:id="@+id/yourScoreTv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            tools:text="@string/your_score" />
+            <TextView
+                android:id="@+id/totalQuestionsCol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text=""
+                android:background="@drawable/table_cell_bg"/>
+        </TableRow>
 
-    </LinearLayout>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="@string/correct_answers"
+                android:background="@drawable/table_cell_bg"/>
+
+            <TextView
+                android:id="@+id/correctAnswerCol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text=""
+                android:background="@drawable/table_cell_bg"/>
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="@string/wrong_answer"
+                android:background="@drawable/table_cell_bg"/>
+
+            <TextView
+                android:id="@+id/wrongAnswerCol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text=""
+                android:background="@drawable/table_cell_bg"/>
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="@string/your_score"
+                android:background="@drawable/table_cell_bg"/>
+
+            <TextView
+                android:id="@+id/yourScoreCol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text=""
+                android:background="@drawable/table_cell_bg"/>
+        </TableRow>
+
+    </TableLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/table"
         android:layout_alignParentBottom="true"
-        android:paddingVertical="10dp"
-        android:orientation="vertical">
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="306dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp">
 
         <Button
             android:id="@+id/try_again_button"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/table_header_bg"
             android:backgroundTint="@color/light_gray"
-            android:text="@string/try_again"/>
+            android:text="@string/try_again"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/result_analysis_button"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/table_cell_bg"
             android:backgroundTint="@color/colorPrimary"
-            android:text="@string/result_analysis"/>
+            android:gravity="center"
+            android:text="@string/result_analysis"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 

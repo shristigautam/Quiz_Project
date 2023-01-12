@@ -10,12 +10,12 @@ class QuizData {
             return mutableListOf(
                 Quiz(
                     1,
-                    "What is Kotlin, and what is its relationship to Java?",
+                    "What is Kotlin?",
                     IS_RADIO_BUTTON,
                     "Kotlin is a statically typed, cross-platform programming language that is fully compatible with Java. It is a more modern and expressive alternative to Java, and it can be used to create Android apps, web apps, and other types of software. It was developed by JetBrains, the company behind the IntelliJ IDEA Java IDE.",
                     "a",
                     null,
-                    mutableListOf("A programming language","A web browser", "A web server", "None of the above")
+                    mutableListOf("A programming language","A web browser", "A web server", "A scripting language")
                 ),
                 Quiz(
                     2,

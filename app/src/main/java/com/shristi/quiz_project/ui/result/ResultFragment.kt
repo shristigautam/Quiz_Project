@@ -42,10 +42,10 @@ class ResultFragment : Fragment(R.layout.fragment_result), OnClickListener {
     }
 
     private fun initData(totalScore: Int) {
-        binding.totalQuestionsTv.text = getString(R.string.total_questions) + " " + sizeOfData
-        binding.correctAnswerTv.text = getString(R.string.correct_answers) + " " + totalScore
-        binding.wrongAnswerTv.text = getString(R.string.wrong_answer) + " " + (sizeOfData - totalScore)
-        binding.yourScoreTv.text = getString(R.string.your_score) + " " + totalScore + " / " + sizeOfData
+        binding.totalQuestionsCol.text = sizeOfData.toString()
+        binding.correctAnswerCol.text =  totalScore.toString()
+        binding.wrongAnswerCol.text = (sizeOfData - totalScore).toString()
+        binding.yourScoreCol.text = totalScore.toString() + " / " + sizeOfData.toString()
 
     }
 
