@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Quiz</string>
-    <string name="total_questions">Number of Questions : </string>
-    <string name="correct_answers">Correct Answers : </string>
-    <string name="wrong_answer">Wrong Answers : </string>
-    <string name="your_score">Total Score : </string>
+    <string name="total_questions">Number of questions : </string>
+    <string name="correct_answers">Correct answers : </string>
+    <string name="wrong_answer">Wrong answers : </string>
+    <string name="your_score">Total score : </string>
 
     <string name="home">Home</string>
     <string name="next">Next</string>

@@ -36,7 +36,7 @@ class RadioButtonQuestionFragment : Fragment(R.layout.fragment_radio_button_ques
         binding.optionsRecyclerView.adapter = adapter
     }
 
-    override fun onRadioButtonClicked(optionPosition: Int) {
+    override fun onRadioButtonClicked(optionPosition: Int, userAnswerDesc: String) {
         quiz.userAnswer = when(optionPosition) {
             0 -> "a"
             1 -> "b"
@@ -44,6 +44,7 @@ class RadioButtonQuestionFragment : Fragment(R.layout.fragment_radio_button_ques
             3 -> "d"
             else -> ""
         }
+        quiz.userAnswerDesc = userAnswerDesc
         viewModel.saveUserAnswer(quiz)
     }
 
