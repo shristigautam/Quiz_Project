@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    tools:context=".SplashScreen">
+    tools:context=".ui.SplashScreen">
 
     <ImageView
         android:id="@+id/SplashScreenImage"
@@ -22,30 +22,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="168dp"
-        android:text="Quiz App"
-        android:textSize="24sp"
-        android:textColor="@color/dark_gray"
         android:gravity="center_horizontal"
+        android:text="Quiz App"
+        android:textColor="@color/dark_gray"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SplashScreenImage">
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@+id/SplashScreenImage"></TextView>
 
     <TextView
         android:id="@+id/shristi_TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="168dp"
-        android:text="by Shristi"
-        android:textSize="12sp"
-        android:textColor="@color/dark_gray"
         android:gravity="center_horizontal"
+        android:text="by Shristi"
+        android:textColor="@color/dark_gray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_textView"></TextView>
+
+    <Button
+        android:id="@+id/getStartedBtn"
+        style="@style/AppTheme.RoundedCornerMaterialButton"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:text="Start Quiz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quiz_textView">
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@+id/shristi_TextView"
+        android:textAllCaps="false"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@
     package="com.shristi.quiz_project">
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,8 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Quiz_Project"
         tools:targetApi="31">
+
         <activity
-            android:name=".SplashScreen"
+            android:name=".ui.result.ResultAnalysisActivity"
+            android:exported="false"
+            android:label="@string/result_analysis">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".ui.SplashScreen"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -22,10 +33,20 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
+
         <activity
-            android:name=".MainActivity">
+            android:name=".ui.MainActivity"
+            android:exported="true">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
+
     </application>
 
 </manifest>

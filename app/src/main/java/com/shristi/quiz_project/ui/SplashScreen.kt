@@ -1,11 +1,13 @@
-package com.shristi.quiz_project
+package com.shristi.quiz_project.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.WindowManager
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.shristi.quiz_project.R
 
 @Suppress("DEPRECATION")
 class SplashScreen : AppCompatActivity() {
@@ -24,11 +26,20 @@ class SplashScreen : AppCompatActivity() {
         // to send a message with a delayed time.
         //Normal Handler is deprecated , so we have to change the code little bit
 
-        // Handler().postDelayed({
-        Handler(Looper.getMainLooper()).postDelayed({
+//        // Handler().postDelayed({
+//
+//        Handler(Looper.getMainLooper()).postDelayed({
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }, 4000) // 4000 is the delayed time in milliseconds.
+
+
+        val getStartedBtn = findViewById<Button>(R.id.getStartedBtn)
+
+        getStartedBtn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish()
-        }, 4000) // 4000 is the delayed time in milliseconds.
+        }
     }
 }
