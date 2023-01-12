@@ -34,6 +34,9 @@ class ResultFragment : Fragment(R.layout.fragment_result), OnClickListener {
                     if (quiz.answer == quiz.userAnswer) {
                         totalScore++
                     }
+                    else{
+                        print("Wrong answer" + quiz.userAnswer)
+                    }
                 }
                 initData(totalScore)
             }

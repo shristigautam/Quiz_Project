@@ -33,7 +33,7 @@ class CBQuestionAdapter(
             if (holder.optionCB.isChecked) {
                 listener.onCheckBoxChecked(Answers(position,holder.optionCB.text.toString()))
             }else {
-                listener.onCheckBoxChecked(Answers(position,holder.optionCB.text.toString()))
+                listener.onCheckBoxUnChecked(Answers(position,holder.optionCB.text.toString()))
             }
         }
     }
