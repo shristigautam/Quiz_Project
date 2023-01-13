@@ -11,6 +11,7 @@ import com.shristi.quiz_project.R
 import com.shristi.quiz_project.data.QuizData
 import com.shristi.quiz_project.databinding.FragmentHomeBinding
 import com.shristi.quiz_project.ui.QuizViewModel
+import com.shristi.quiz_project.ui.SecondSplashScreen
 import com.shristi.quiz_project.ui.SplashScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -63,7 +64,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), OnClickListener{
 
             R.id.home_button -> {
                 resetDB()
-                val intent = Intent(activity, SplashScreen::class.java)
+                val intent = Intent(activity, SecondSplashScreen::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent)
             }

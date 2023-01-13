@@ -11,6 +11,7 @@ import com.shristi.quiz_project.R
 import com.shristi.quiz_project.data.QuizData
 import com.shristi.quiz_project.databinding.FragmentResultBinding
 import com.shristi.quiz_project.ui.AnswerViewModel
+import com.shristi.quiz_project.ui.SecondSplashScreen
 import com.shristi.quiz_project.ui.SplashScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -69,7 +70,7 @@ class ResultFragment : Fragment(R.layout.fragment_result), OnClickListener {
         when(v!!.id) {
             R.id.try_again_button -> {
                 resetDB()
-                val intent = Intent(activity, SplashScreen::class.java)
+                val intent = Intent(activity, SecondSplashScreen::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent)
             }

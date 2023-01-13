@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Quiz</string>
+    <string name="welcome"> Welcome to Kotlin Quiz App</string>
+    <string name="details"> There are 15 questions in this quiz. If you answer each one correctly, you will get 15 points.
+        Otherwise, you will lose one point for each.
+        At the end, you can analyze your results and see where you did wrong or right and restart the quiz.</string>
+
     <string name="total_questions">Number of questions : </string>
     <string name="correct_answers">Correct answers : </string>
     <string name="wrong_answer">Wrong answers : </string>

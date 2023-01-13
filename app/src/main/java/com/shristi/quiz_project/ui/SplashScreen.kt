@@ -27,19 +27,19 @@ class SplashScreen : AppCompatActivity() {
         //Normal Handler is deprecated , so we have to change the code little bit
 
 //        // Handler().postDelayed({
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, SecondSplashScreen::class.java)
+            startActivity(intent)
+            finish()
+        }, 4000) // 4000 is the delayed time in milliseconds.
+
+
+//        val getStartedBtn = findViewById<Button>(R.id.getStartedBtn)
 //
-//        Handler(Looper.getMainLooper()).postDelayed({
+//        getStartedBtn.setOnClickListener {
 //            val intent = Intent(this, MainActivity::class.java)
 //            startActivity(intent)
-//            finish()
-//        }, 4000) // 4000 is the delayed time in milliseconds.
-
-
-        val getStartedBtn = findViewById<Button>(R.id.getStartedBtn)
-
-        getStartedBtn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+//        }
     }
 }
