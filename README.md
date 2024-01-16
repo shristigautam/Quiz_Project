@@ -1,5 +1,5 @@
 # Quiz Project
-This is a project I developed as an assignment for Mobile Device Programming course at Maharishi International Universoty (MIU).
+This is a project I developed as an assignment for Mobile Device Programming course at Maharishi International University (MIU).
 
 ### 1)	Splash Screen
 ![Splash Screen](https://github.com/shristigautam/Quiz_Project/blob/master/Screenshots/Splash.PNG)
